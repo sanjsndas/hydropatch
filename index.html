@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydropatch - Smart Gardening Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .nav-link:hover {
+            color: #0369a1;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(2, 132, 199, 0.9), rgba(7, 89, 133, 0.9));
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .tip-card {
+            transition: all 0.3s ease;
+        }
+        .tip-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .service-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .service-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-10 w-auto" src="https://img.icons8.com/color/48/000000/watering-can.png" alt="Hydropatch logo">
+                        <span class="ml-2 text-xl font-bold text-primary-800">HYDROPATCH</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="index.html"class="nav-link border-primary-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" aria-current="page">Home</a>
+                    <a href="privacy.html" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" tabindex="0">Privacy</a>
+                    <a href="terms.html" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" tabindex="0">Cookies</a>
+                    <a href="contact.html" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" tabindex="0">Contact us</a>>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round", stroke-linejoin="round", stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round", stroke-linejoin="round", stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+
+    <!-- Hero Section -->
+    <div class="relative hero-gradient">
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover opacity-20" src="p2.jpeg" alt="Greenhouse">
+        </div>
+        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Watering specific zones.<br> Growing happy roots.
+            </h1>
+            <p class="mt-6 text-xl max-w-3xl mx-auto text-blue-100">
+                "Smart zones. Happy roots." - Our hydropatch technology revolutionizes garden irrigation
+            </p>
+            <div class="mt-10">
+                <a href="#consultation" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-700 bg-white hover:bg-primary-50">
+                    Free Consultation
+                </a>
+                <a href="#services" class="ml-4 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-800 bg-opacity-60 hover:bg-opacity-70">
+                    Our Services
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section with Images -->
+    <div id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="lg:text-center">
+            <h2 class="text-base text-primary-600 font-semibold tracking-wide uppercase">Our Solutions</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Comprehensive Hydropatch Services
+            </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                We offer complete smart irrigation solutions for residential and commercial properties
+            </p>
+        </div>
+
+        <div class="mt-10">
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Service 1 - Smart Zone Mapping -->
+                <div class="service-card bg-white overflow-hidden shadow rounded-lg">
+                    <img src="s1.jpeg" alt="Zone mapping" class="service-image">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Smart Zone Mapping</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Our advanced mapping technology identifies micro-climates and soil variations to create customized watering zones. Includes drone-assisted topographical analysis.
+                        </p>
+                        <div class="mt-5">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
+                                Precision Technology
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 - Automated Irrigation -->
+                <div class="service-card bg-white overflow-hidden shadow rounded-lg">
+                    <img src="s2.jpeg" alt="Automated irrigation" class="service-image">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Automated Irrigation</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Self-learning systems adjust watering based on real-time weather data. Includes mobile app control and voice activation.
+                        </p>
+                        <div class="mt-5">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
+                                AI-Powered
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 - Maintenance -->
+                <div class="service-card bg-white overflow-hidden shadow rounded-lg">
+                    <img src="s3.jpeg" alt="Maintenance" class="service-image">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Annual Maintenance</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Comprehensive maintenance including winterization, spring startup, and system inspections with priority service guarantees.
+                        </p>
+                        <div class="mt-5">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
+                                24/7 Support
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 - Rainwater Integration -->
+                <div class="service-card bg-white overflow-hidden shadow rounded-lg">
+                    <img src="s4.jpeg" alt="Rainwater harvesting" class="service-image">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Rainwater Integration</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Custom rainwater harvesting systems with filtration and automatic switching between water sources.
+                        </p>
+                        <div class="mt-5">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
+                                Eco-Friendly
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5 - Commercial Solutions -->
+                <div class="service-card bg-white overflow-hidden shadow rounded-lg">
+                    <img src="s5.jpeg" alt="Commercial landscaping" class="service-image">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Commercial Solutions</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Enterprise-grade irrigation for golf courses and parks with centralized monitoring and leak detection.
+                        </p>
+                        <div class="mt-5">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
+                                Scalable
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6 - Training Programs -->
+                <div class="service-card bg-white overflow-hidden shadow rounded-lg">
+                    <img src="s6.jpeg" alt="Training program" class="service-image">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Training Programs</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Hands-on workshops covering system operation, troubleshooting, and water conservation techniques.
+                        </p>
+                        <div class="mt-5">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
+                                Education
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultant Section -->
+    <div id="consultation", class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="lg:text-center">
+            <h2 class="text-base text-primary-600 font-semibold tracking-wide uppercase">Professional Consultation</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Expert Hydropatch Guidance
+            </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                Our certified horticulturists provide tailored solutions for your garden's unique needs.
+            </p>
+        </div>
+
+        <div class="mt-20">
+            <div class="space-y-20">
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3">
+                                <img class="rounded-lg h-full w-full object-cover" src="p1.png" alt="Consultant with client">
+                            </div>
+                            <div class="md:w-2/3 md:pl-8 mt-6 md:mt-0">
+                                <h3 class="text-2xl font-bold text-gray-900">Personalized Garden Analysis</h3>
+                                <p class="mt-4 text-lg text-gray-600">
+                                    Our hydropatch consultants use advanced soil analysis and zone mapping to identify the precise watering needs of each plant cluster. This scientific approach ensures optimal water distribution while conserving resources.
+                                </p>
+                                <p class="mt-4 text-lg text-gray-600">
+                                    The consultation process involves assessing sun exposure patterns, soil composition, plant types, and topography. Using specialized moisture sensors, we gather real-time data to create a customized hydropatch blueprint. This blueprint forms the foundation of our smart irrigation system design.
+                                </p>
+                                <div class="mt-8">
+                                    <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                        Schedule Your Consultation
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional consultation content begins -->
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h3 class="text-2xl font-bold text-gray-900">The Science Behind Hydropatch Technology</h3>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Hydropatch represents the cutting edge of precision irrigation technology, combining decades of agricultural research with modern smart home integration. Unlike traditional sprinkler systems that water indiscriminately, hydropatch employs a network of micro-irrigation zones that can be independently controlled based on real-time environmental data.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            At the core of our system are sophisticated moisture sensors that continuously monitor soil conditions at various depths. These sensors communicate with a central processing unit that analyzes data points including temperature, humidity, solar radiation, and precipitation forecasts. The system dynamically adjusts watering schedules to deliver exactly what each plant needs, when it needs it.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Our hydropatch consultants undergo rigorous training in plant physiology, soil science, and smart technology integration. Each professional completes a minimum of 300 hours of field training before being certified to design hydropatch systems. This extensive knowledge base ensures that every installation meets our exacting standards for efficiency and plant health optimization.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            The installation process begins with a comprehensive site survey. Using GPS mapping technology, we create a detailed digital model of your property, noting elevation changes, sun exposure patterns, and existing plant material. This digital model allows us to simulate water flow and predict coverage before any physical installation begins, reducing trial-and-error adjustments.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Hydropatch systems are designed with modularity in mind, allowing for easy expansion as your garden evolves. Whether you're adding new planting beds or redesigning your landscape, the system can grow with your needs. Our consultants provide detailed documentation of your system's configuration, making future modifications straightforward and cost-effective.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Water conservation is a fundamental principle of hydropatch technology. Independent studies have shown that properly configured hydropatch systems reduce water consumption by 45-65% compared to conventional irrigation methods. This efficiency is achieved through precise application directly to root zones where water is needed most, minimizing evaporation and runoff.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            For commercial applications, hydropatch technology offers additional benefits in labor reduction and system monitoring. Property managers can access real-time irrigation data through our cloud-based dashboard, receiving alerts for potential issues like leaks or equipment malfunctions. This proactive monitoring prevents water waste and protects your landscape investment.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Our hydropatch consultants don't just install systems - they become long-term partners in your garden's success. Each installation includes quarterly check-ups for the first year, with annual maintenance plans available thereafter. These visits allow us to fine-tune the system as plants mature and seasons change, ensuring continued optimal performance.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            In residential applications, the hydropatch system integrates seamlessly with smart home platforms, allowing control via voice commands or mobile apps. Homeowners can easily adjust settings for special circumstances like hosting outdoor events or going on vacation. The system can even detect when you've had company in the garden and suggest temporary watering adjustments to compensate for compacted soil.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            For clients with edible gardens, hydropatch technology includes specialized features for food crops. The system can be programmed to account for harvest schedules, reducing water in the days before picking to improve flavor concentration in fruits and vegetables. Additional sensors can monitor soil nutrient levels, providing data to integrate with your fertilization regimen.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Commercial properties benefit from hydropatch's zone-specific reporting, which provides detailed water usage data for sustainability reporting and LEED certification documentation. The system can generate water conservation metrics broken down by plant type or landscape area, valuable information for environmentally-conscious businesses.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Our premium hydropatch packages include weather integration that automatically adjusts watering based on real-time forecasts. If rain is expected within a configured time window, the system will delay or reduce scheduled watering. Advanced systems can even differentiate between brief showers and substantial rainfall, making precise adjustments accordingly.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            For regions with water restrictions, hydropatch systems include compliance features that automatically adjust to local regulations. The system maintains an updated database of watering ordinances and can be configured to receive push notifications when temporary restrictions are enacted. This ensures your landscape remains beautiful while staying within legal requirements.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Hydropatch consultants undergo continuous education to stay current with the latest advancements in irrigation technology and plant science. We maintain partnerships with leading agricultural research institutions, giving our clients access to cutting-edge solutions before they reach the broader market. This commitment to innovation sets hydropatch apart in the landscape industry.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            The hydropatch philosophy extends beyond technology to encompass holistic garden health. Our consultants provide guidance on companion planting strategies that maximize water efficiency through natural synergies between plant species. We can recommend drought-resistant cultivars that thrive in your specific microclimate while maintaining aesthetic appeal.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            For clients interested in sustainable practices, hydropatch systems can integrate with rainwater harvesting setups. The controller automatically prioritizes stored rainwater when available, switching to municipal water only when necessary. This feature maximizes your conservation efforts while maintaining landscape quality during dry periods.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Large-scale hydropatch implementations for estates or commercial properties can include AI-driven predictive analytics. These advanced systems learn from historical data to anticipate watering needs before they arise, adjusting for seasonal variations and long-term climate trends. This forward-looking approach provides a level of efficiency and sustainability that traditional systems cannot match. 
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Our commitment to customer satisfaction is paramount. We offer a 100% satisfaction guarantee on all installations, ensuring that our clients are fully satisfied with their hydropatch systems. Should any issues arise, our dedicated support team is available 24/7 to assist with troubleshooting and maintenance.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Feedback from our clients highlights the transformative impact of hydropatch technology on their gardening experience. Many report significant reductions in water bills and healthier, more vibrant plants. Our user-friendly interface allows clients to monitor their systems easily, providing peace of mind and control over their garden's irrigation.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            As part of our ongoing commitment to education, we provide resources and workshops for our clients. These sessions cover best practices in garden care, sustainable landscaping, and the latest advancements in irrigation technology. We believe that informed clients are empowered clients, and we strive to equip you with the knowledge to make the most of your hydropatch system.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            In addition to our core services, we offer seasonal tips and tricks to help you maximize your garden's potential. From pest management to soil health, our experts share insights that can enhance your gardening experience. Our blog features articles written by horticulturalists and industry professionals, providing a wealth of information at your fingertips.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            We also encourage community engagement through our social media platforms. Follow us for updates, gardening inspiration, and to connect with fellow gardening enthusiasts. Our community is a place to share successes, ask questions, and learn from one another.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            As we look to the future, hydropatch is committed to innovation and sustainability. We are continuously researching new technologies and methods to improve our systems and reduce our environmental impact. Our goal is to lead the way in smart gardening solutions, making it easier for everyone to enjoy the beauty and benefits of a well-maintained garden.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Thank you for considering Hydropatch for your gardening needs. We look forward to partnering with you to create a thriving, sustainable garden that you can enjoy for years to come.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center">About Us</h2>
+            <p class="mt-4 text-lg text-gray-600 text-center">
+                At Hydropatch, we are passionate about revolutionizing the way gardens are irrigated. Our team of experts combines years of experience in horticulture and technology to provide innovative solutions that promote healthy plant growth while conserving water. We believe that every garden deserves the best care, and we are dedicated to helping our clients achieve their gardening goals.
+            </p>
+        </div>
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center">Client Feedback</h2>
+            <div class="mt-8 space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p class="text-lg text-gray-600">"Hydropatch has transformed my garden! The system is easy to use, and my plants have never looked better." - Sarah J.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p class="text-lg text-gray-600">"I love how much water I'm saving with Hydropatch. It's a game changer for my landscaping business!" - Mark T.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p class="text-lg text-gray-600">"The consultation process was thorough and informative. I feel confident in my garden's care now." - Emily R.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tips Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center">Gardening Tips</h2>
+            <ul class="mt-8 space-y-4">
+                <li class="text-lg text-gray-600">1. Water early in the morning to reduce evaporation.</li>
+                <li class="text-lg text-gray-600">2. Use mulch to retain soil moisture and suppress weeds.</li>
+                <li class="text-lg text-gray-600">3. Choose native plants that require less water and maintenance.</li>
+                <li class="text-lg text-gray-600">4. Regularly check soil moisture levels to avoid overwatering.</li>
+                <li class="text-lg text-gray-600">5. Rotate crops each season to maintain soil health.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Disclaimer Section -->
+    <div class="bg-gray-100 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-gray-600">Disclaimer: Hydropatch is not responsible for any damages or losses resulting from the use of our products or services. Always consult with a professional before making significant changes to your garden.</p>
+        </div>
+    </div>
+
+    <!-- Customer Satisfaction Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900">Customer Satisfaction</h2>
+            <p class="mt-4 text-lg text-gray-600">We strive for excellence in every project. Your satisfaction is our priority, and we are committed to providing the best service possible.</p>
+        </div>
+    </div>
+
+    <!-- Address Section -->
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-white">Address: 55 East 10th Street, New York, NY 10003, United States</p>
+        </div>
+    </footer>
+</body>
+</html>
